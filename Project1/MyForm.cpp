@@ -196,9 +196,7 @@ void Initialization(double* coords, double * speed, int radius, const int mean, 
 }
 void Project1::MyForm::button1_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-	//int counter = 1;
-//start:
-	//clock_t begin = clock();
+	
 		ofstream file;
 		sf::Image Screenshot;
 		sf::ContextSettings set;
@@ -255,11 +253,7 @@ void Project1::MyForm::button1_Click(System::Object^  sender, System::EventArgs^
 
 		Initialization(coords, speed, radius, mean, mod, colors);
 
-		//for (int i = 0; i < Np; i++) {
-		//	colors[3 * i] = 255;
-		//	colors[3 * i + 1] = 255;
-		//	colors[3 * i + 2] = 255;
-		//} // color of particles
+		
 
 		  //////////////////////////////Configs
 		glEnable(GL_POINT_SMOOTH);
@@ -334,7 +328,7 @@ void Project1::MyForm::button1_Click(System::Object^  sender, System::EventArgs^
 
 			window.draw(kostil);
 			window.display();
-			//frame_time = clock1.restart().asSeconds();
+			
 		}
 		delete[] coords;
 		delete[] coordsrend;
