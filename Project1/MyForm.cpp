@@ -275,27 +275,27 @@ void Project1::MyForm::button1_Click(System::Object^  sender, System::EventArgs^
 				if (event.type == sf::Event::Closed)
 				{
 					string text;
-					text = "paricles.txt";
-					file.open(text);
-					for (int i = 1; i <= shapes_number; i++) //Count the number of particles in rings and write in a file
-						file << i << " ";
-					file << endl;
-					int sum, total = 0;
-					for (int i = 1; i < shapes_number; i++) {
-						sum = 0;
-						for (int j = 0; j < Np; j++)
-							if ((sqrt(pow(coords[2 * j + 1], 2) + pow(coords[2 * j], 2)) <= ((radius / shapes_number) * i)) && (((sqrt(pow(coords[2 * j + 1], 2) + pow(coords[2 * j], 2)) >= ((radius / shapes_number) * (i - 1))))))
-								sum++;
-						total += sum;
-						file << sum << " ";
-					}
-					file << Np - total;
-					file << endl;
+					//text = "paricles.txt";
+					//file.open(text);
+					//for (int i = 1; i <= shapes_number; i++) //Count the number of particles in rings and write in a file
+					//	file << i << " ";
+					//file << endl;
+					//int sum, total = 0;
+					//for (int i = 1; i < shapes_number; i++) {
+					//	sum = 0;
+					//	for (int j = 0; j < Np; j++)
+					//		if ((sqrt(pow(coords[2 * j + 1], 2) + pow(coords[2 * j], 2)) <= ((radius / shapes_number) * i)) && (((sqrt(pow(coords[2 * j + 1], 2) + pow(coords[2 * j], 2)) >= ((radius / shapes_number) * (i - 1))))))
+					//			sum++;
+					//	total += sum;
+					//	file << sum << " ";
+					//}
+					//file << Np - total;
+					//file << endl;
 					//Screenshot = window.capture();
 					//string picture;
 					//picture = "noise = " + to_string(Noise_amp) + ".png";
 					//Screenshot.saveToFile(picture);
-					file.close();
+					//file.close();
 					window.close();
 
 				}
